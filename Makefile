@@ -12,9 +12,9 @@ update : $(PHDOCS)
 	# insert code for copying to server here.
 	@echo ' done.'
 
-html/%.html : %.jemdoc
+docs/%.html : %.jemdoc
 	python jemdoc.py -o $@ $<
 
 .PHONY : clean
 clean :
-	-rm -f html/*.html
+	-rm -f docs/*.html
